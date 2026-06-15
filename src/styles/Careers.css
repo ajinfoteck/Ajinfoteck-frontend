@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #1a2744;
+  --navy-dark: #111c36;
+  --navy-light: #243156;
+  --navy-card: #1e2f52;
+  --navy-card-header: #172240;
+  --navy-input: #162038;
+  --blue-mid: #2d4a8a;
+  --accent: #4a7fd4;
+  --accent-bg: rgba(74, 127, 212, 0.15);
+  --error: #e05c5c;
+  --error-bg: rgba(224, 92, 92, 0.12);
+  --success: #3db87a;
+  --success-bg: rgba(61, 184, 122, 0.12);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-input: rgba(255, 255, 255, 0.15);
+  --grey-400: #7a8fae;
+  --grey-500: #a0b0c8;
+  --grey-600: #c5d0e0;
+  --white: #ffffff;
+  --text: #e8edf5;
+  --radius: 6px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.careers-container {
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 50%, var(--blue-mid) 100%);
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+}
+
+/* ── Banner ── */
+.careers-banner {
+  background: transparent;
+  padding: 60px 24px 52px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.careers-banner .badge {
+  display: inline-block;
+  background: rgba(74, 127, 212, 0.25);
+  color: #8eb8f0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(74, 127, 212, 0.3);
+}
+
+.careers-banner h1 {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  max-width: 560px;
+  margin: 0 auto 14px;
+  letter-spacing: -0.5px;
+}
+
+.careers-banner p {
+  color: var(--grey-400);
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ── Body ── */
+.careers-body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ── Card ── */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.card-icon {
+  width: 34px;
+  height: 34px;
+  background: var(--navy);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.card-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #8eb8f0;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.1px;
+}
+
+.card-header .count {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: var(--grey-400);
+  font-weight: 500;
+}
+
+/* ── Roles List ── */
+.roles-list { list-style: none; }
+
+.roles-list li {
+  display: flex;
+  align-items: center;
+  padding: 15px 24px;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--grey-600);
+  gap: 12px;
+  transition: background 0.15s;
+}
+
+.roles-list li:last-child { border-bottom: none; }
+.roles-list li:hover { background: rgba(255, 255, 255, 0.04); }
+
+.role-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.role-name { flex: 1; }
+
+.role-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 4px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.3px;
+}
+
+/* ── Form ── */
+.form-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field-group label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--grey-500);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.req {
+  color: var(--error);
+  margin-left: 2px;
+}
+
+.field-group input,
+.field-group select {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1.5px solid var(--border-input);
+  border-radius: var(--radius);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.field-group input::placeholder { color: var(--grey-400); font-weight: 400; }
+.field-group select option { background: var(--navy-dark); color: var(--white); }
+
+.field-group input:focus,
+.field-group select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(74, 127, 212, 0.18);
+}
+
+/* Error state */
+.field-group.has-error input,
+.field-group.has-error select,
+.field-group.has-error .file-upload-area {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+.field-group.has-error input:focus,
+.field-group.has-error select:focus {
+  box-shadow: 0 0 0 3px rgba(224, 92, 92, 0.18);
+}
+
+.error-msg {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--error);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.error-msg::before {
+  content: "!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  background: var(--error);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Select chevron */
+.select-wrap { position: relative; }
+
+.select-wrap::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-60%);
+  border: 5px solid transparent;
+  border-top-color: var(--grey-400);
+  pointer-events: none;
+}
+
+/* ── File Upload ── */
+.file-upload-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.file-upload-area:hover {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.file-upload-area.has-file {
+  border-style: solid;
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.file-upload-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--navy);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.has-file .file-upload-icon {
+  background: var(--success);
+}
+
+.file-upload-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--white);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.file-upload-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.file-upload-text strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  word-break: break-all;
+}
+
+.file-upload-text span {
+  font-size: 0.88rem;
+  color: var(--grey-400);
+  font-weight: 400;
+}
+
+/* ── Divider & Footer ── */
+.form-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.form-note {
+  font-size: 0.9rem;
+  color: var(--grey-400);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.form-note strong { color: var(--grey-500); }
+
+/* ── Submit Button ── */
+.submit-btn {
+  padding: 14px 34px;
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+  background: #3a6bc0;
+  box-shadow: 0 4px 18px rgba(74, 127, 212, 0.4);
+}
+
+.submit-btn:active { transform: scale(0.98); }
+
+/* ── Success State ── */
+.success-state {
+  padding: 48px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--success-bg);
+  color: var(--success);
+  border: 2px solid var(--success);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.success-state h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.success-state p {
+  font-size: 1.05rem;
+  color: var(--grey-500);
+  max-width: 380px;
+  line-height: 1.6;
+}
+
+/* ── Page Footer ── */
+.careers-footer {
+  text-align: center;
+  padding: 0 24px 40px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--grey-400);
+}
+
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  .form-row { grid-template-columns: 1fr; }
+  .form-footer { flex-direction: column; align-items: stretch; }
+  .submit-btn { text-align: center; }
+  .careers-banner { padding: 44px 20px 40px; }
+  .form-body { padding: 20px; }
+}
+
+.career-title{
+  color: #ff4949 !important;
+}
