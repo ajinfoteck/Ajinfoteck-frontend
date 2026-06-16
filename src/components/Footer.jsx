@@ -30,7 +30,7 @@ function Footer() {
         {/* LEFT */}
         <div className="footer-col">
           <img
-            src={`http://localhost:5000/${data.logo}`}
+            src={`https://aj-infoteck-4sl7xsmtv-arul-guru-prakashs-projects-dc580452.vercel.app/${data.logo}`}
             alt="logo"
             className="footer-logo" style={{ width: "170px" }}
           />

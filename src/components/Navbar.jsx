@@ -51,7 +51,7 @@ function Navbar() {
       {/* Logo */}
       <Link to={menu.home?.link || "/"} style={{ textDecoration: "none" }}>
         <img
-          src={`http://localhost:5000/${menuData.logo}`}
+          src={`https://aj-infoteck-4sl7xsmtv-arul-guru-prakashs-projects-dc580452.vercel.app/${menuData.logo}`}
           alt="Logo"
           className="logo"
         />

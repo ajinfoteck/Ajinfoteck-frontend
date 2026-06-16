@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000"
+  baseURL: "https://aj-infoteck-4sl7xsmtv-arul-guru-prakashs-projects-dc580452.vercel.app/"
 });
 
 export default API;
