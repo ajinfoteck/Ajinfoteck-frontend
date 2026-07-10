@@ -45,13 +45,13 @@ function Navbar() {
   if (!menuData || !menuData.menu) return null;
 
   const menu = menuData.menu;
-
+console.log("Logo URL:", menuData.logo);
   return (
     <nav className="navbar">
       {/* Logo */}
       <Link to={menu.home?.link || "/"} style={{ textDecoration: "none" }}>
         <img
-          src={`https://aj-infoteck-4sl7xsmtv-arul-guru-prakashs-projects-dc580452.vercel.app/${menuData.logo}`}
+          src={menuData.logo}
           alt="Logo"
           className="logo"
         />
