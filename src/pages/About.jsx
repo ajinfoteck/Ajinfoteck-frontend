@@ -3,7 +3,7 @@ import { FaUsers, FaBullseye, FaGlobe } from "react-icons/fa";
 import axios from "../api/axios";
 import "../styles/About.css";
 
-const BASE_URL = "https://aj-infoteck.vercel.app"; // 👈 Change this to your backend base URL
+const BASE_URL = "https://ajinfoteck-backend.vercel.app"; // 👈 Change this to your backend base URL
 
 const About = () => {
   const [data, setData] = useState(null);

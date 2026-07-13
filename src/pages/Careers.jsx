@@ -164,7 +164,7 @@ const Careers = () => {
 
     try {
       const res = await axios.post(
-        "https://aj-infoteck.vercel.app//api/apply",
+        "https://ajinfoteck-backend.vercel.app/api/apply",
         formDataToSend,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
