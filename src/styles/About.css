@@ -261,3 +261,26 @@
 .vision-main-title{
   color: #ff4949;
 }
+
+/* ── LAPTOP / DESKTOP SPACING FIX ── */
+@media (min-width: 769px) {
+
+   .vision-container {
+    min-height: auto;
+    padding: 60px 24px 70px;
+  }
+
+  .vision-main-title {
+    margin-bottom: 45px;
+  }
+
+
+  .team-section {
+    padding: 190px 24px 70px;
+  }
+
+  .team-header {
+    margin-bottom: 45px;
+  }
+
+}
