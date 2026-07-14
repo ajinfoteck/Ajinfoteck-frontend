@@ -65,7 +65,20 @@ function Home() {
     fetchHomeData();
   }, []);
 
-  if (!data) return <p>Loading...</p>;
+ if (!data) {
+  return (
+    <div className="d-flex justify-content-center align-items-center vh-100">
+      <div 
+        className="spinner-border text-primary" 
+        role="status"
+      >
+        <span className="visually-hidden">
+          Loading...
+        </span>
+      </div>
+    </div>
+  );
+}
 
   const { text, color } = words[i];
 
