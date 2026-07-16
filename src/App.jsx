@@ -50,6 +50,7 @@ function AppContent() {
     <>
       <GlobalLoader />
       <Navbar />
+      <main className="page-content">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -60,6 +61,7 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
+      </main>
       <Footer />
     </>
   );

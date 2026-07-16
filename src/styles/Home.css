@@ -3,8 +3,6 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: radial-gradient(circle at center, #45240c 0%, #0f355e 60%, #130b55 100%);
-  min-height: 100vh;
-  background-attachment: fixed;
   color: white;
 }
 
